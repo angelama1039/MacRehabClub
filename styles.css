@@ -318,3 +318,8 @@ h2{
     align-items: center; /* Centers the content vertically */
     box-sizing: border-box; /* Include padding and border in the width and height calculation */
 }
+
+.headShotPicture{
+    width: 20%;
+    height: auto;
+}
