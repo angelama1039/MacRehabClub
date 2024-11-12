@@ -1,0 +1,320 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background colour */
+body, html {
+    background-color: #abe1e1; /* You can use any color name, hex code, rgb, etc. */
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    direction: ltr;
+}
+
+/* Paragraph style */
+p {
+    font-family: Georgia, serif;
+    color: #620f6e;
+    font-size: 15pt;
+    margin: 20px 0;
+    text-align: left;
+    line-height: 1.5;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #a192bf;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the navbar stretch across the full width */
+    height: 7%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+/* Style for the logo */
+.nav-logo {
+    margin-right: auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    position: relative
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #a192bf;
+}
+
+/* Nav Toggle Button (for mobile view) */
+
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background : url('/Users/angela_annyu/WebStormProjects/mrc_draft') no-repeat center;
+        background-size: contain;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border: none;
+        cursor: none;
+
+    }
+
+    /* Mobile View */
+    @media (max-width: 768px) {
+        .nav-toggle {
+            display: none; /* Hide navigation links initially for mobile */
+            flex-direction: column;
+            background-color: #a192bf;
+            width: 100%;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            padding: 1rem;
+        }
+    }
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+
+/* contact styling */
+.contact {
+    padding-top: 7%; /* Adjusted padding for consistent spacing at the top */
+    width: 100%; /* Full width of the container */
+    display: flex; /* Flexbox to align child elements */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    box-sizing: border-box; /* Include padding and border in the width and height calculation */
+}
+
+
+/* Styling the <h1> element */
+h1 {
+    font-family: 'Chalkboard', 'Comic Sans MS', cursive; /* Set Chalkboard with fallback fonts */
+    font-size: 22pt; /* Adjust the size as needed */
+    font-weight: bold; /* Optional: Adjust the boldness of the font */
+    color: #400340; /* Optional: Set a color */
+}
+
+h2{
+    color: #4c0e4c;
+}
+
+/* Dropdown Styling */
+.dropdown{
+    position: relative; /* Parent to position dropdown items */
+}
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #a192bf;
+    list-style: none;
+    padding: 0.5rem 0;
+    min-width: 150px;
+    border-radius: 4px;
+}
+
+.dropdown-menu li{
+    padding: .5rem 1rem;
+}
+
+.dropdown-menu li a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu li a:hover{
+    background-color: #00bcd4; /* Highlight effect for dropdown links */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show dropdown when hovering on the "Home" link */
+}
+
+/* Nav Toggle Button (for mobile view) */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #007bff;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .dropdown-menu {
+        position: static; /* To make dropdown work well in mobile view */
+    }
+}
+
+/* Styling for the main image */
+.main-image {
+    width: 100%;              /* Make the image full width */
+    max-width: 500px;         /* Limit the maximum width */
+    height: auto;             /* Maintain aspect ratio */
+    border-radius: 8px;       /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    margin-top: 20px;         /* Add some margin to the top */
+    align-content: center;
+}
+
+.float-image {
+    float: left; /* Align the image to the left */
+    margin-right: 15px; /* Add some spacing */
+    margin-bottom: 15px; /* Add spacing at the bottom */
+    max-width: 300px; /* Adjust the width */
+    height: auto;
+    align-content: center;
+}
+
+
+/* Style the logo */
+.logo {
+    max-width: 100px; /* Control the size of the logo */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%
+}
+
+.grid-container {
+    display: flex; /* Use CSS Grid */
+    grid-template-columns: 1fr 1fr; /* Divide into two equal columns */
+    height: 100vh; /* Full viewport height */
+}
+
+.split-screen-container{
+    display: flex; /* Flexbox layout to create two equal halves */
+    height: 100vh; /* Full viewport height */
+    width: 100vw;
+}
+
+/* Separate the page into two halves */
+.left-half{
+    flex: 1; /* Take up half of the available width */
+    position: relative; /* Positioning for child elements */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.right-half{
+    flex: 1; /* Take up the other half of the available width */
+    padding: 3%; /* Add some padding for the content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    text-align: left;
+}
+
+.image-stack {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.base-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    object-fit: cover;
+}
+
+.overlapping-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the overlapping image */
+    width: 100%;
+    height: auto;
+    z-index: 2; /* Higher z-index to keep it above the base image */
+}
+
+.section{
+    width: 100%; /* Full width of viewport */
+    height: auto; /* Full height of viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
+.section1{
+    background-color: #f8e68c;
+}
+
+.event{
+    padding-top: 7%; /* Adjusted padding for consistent spacing at the top */
+    width: 100%; /* Full width of the container */
+    display: flex; /* Flexbox to align child elements */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    box-sizing: border-box; /* Include padding and border in the width and height calculation */
+}
