@@ -319,6 +319,13 @@ h2{
     box-sizing: border-box; /* Include padding and border in the width and height calculation */
 }
 
+.contact p {
+    display: flex;                /* Makes the <p> a flex container */
+    flex-direction: column;       /* Stacks the content vertically */
+    align-items: center;          /* Centers content horizontally */
+    text-align: center;           /* Centers text inside the paragraph */
+}
+
 .headShotPicture{
     width: 20%;
     height: auto;
