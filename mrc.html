@@ -11,7 +11,7 @@
 </head>
 <body>
 <!-- Navigation bar -->
-<nav class = "navbar">
+    <nav class = "navbar">
     <!-- Website logo or brand name -->
     <div class = "navLogo">McMaster Rehabilitation Club</div>
 
@@ -23,20 +23,15 @@
         <!-- Navigation item: Home with a dropdown -->
         <li class="dropdown">
             <a href="mrc.html">Home</a>
-            <ul class="dropdown-menu">
-                <li><a href="#subitem1">Subitem 1</a></li>
-                <li><a href="#subitem2">Subitem 2</a></li>
-                <li><a href="#subitem3">Subitem 3</a></li>
-            </ul>
         </li>
 
         <!-- Navigation item: Services -->
         <li class = "dropdown">
             <a href="event.html">Events</a>
             <ul class = "dropdown-menu">
-                <li><a href="#subitem1">Subitem 1</a></li>
-                <li><a href="#subitem2">Subitem 2</a></li>
-                <li><a href="#subitem3">Subitem 3</a></li>
+                <li><a href="event-now.html">Happening Now</a></li>
+                <li><a href="event-planned.html">Planned</a></li>
+                <li><a href="event-past.html">Past</a></li>
             </ul>
         </li>
 
@@ -44,17 +39,13 @@
         <li><a href="about.html">About</a></li>
 
         <!-- Navigation item: Contact -->
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Contact</a>
+        </li>
     </ul>
 </nav>
 
-<!-- Put the logo into a semicircle -->
-<!--    <div class = semicircleTop>-->
-<!--        <img src = "image/mrcLogo.jpg" alt = "Club Logo" class = "logo">-->
-<!--    </div>-->
-
 <!-- Top section split into two parts -->
-<div class="container">
+    <div class="container">
     <div class = "section" id="section1">
         <div class = split-screen-container>
 
@@ -98,8 +89,8 @@
 </div>
 
 <!-- Link to the external JavaScript file for interactivity -->
-<script src="script.js"></script>
-<script>
+    <script src="script.js"></script>
+    <script>
     let currentSection = 0;
     const sections = document.querySelectorAll('.section');
 

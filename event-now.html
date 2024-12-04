@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name = "viewpoint" content = "width = deviceWidth, initial-scale = 1.0">
+    <!-- Link to the external CSS file for styling the navbar -->
+    <link rel = "stylesheet" href = "styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+    <title>Event-now</title>
+</head>
+<body>
+  <nav class = "navbar">
+  <!-- Website logo or brand name -->
+  <div class = "navLogo">McMaster Rehabilitation Club</div>
+
+  <!-- Toggle button for mobile view -->
+  <!-- It will be visible only on smaller screens -->
+
+  <!-- Navigation links -->
+  <ul class="nav-links" id="nav-links">
+    <!-- Navigation item: Home with a dropdown -->
+    <li class="dropdown">
+      <a href="mrc.html">Home</a>
+    </li>
+
+    <!-- Navigation item: Services -->
+    <li class = "dropdown">
+      <a href="event.html">Events</a>
+      <ul class = "dropdown-menu">
+        <li><a href="event-now.html">Happening Now</a></li>
+        <li><a href="event-planned.html">Planned</a></li>
+        <li><a href="event-past.html">Past</a></li>
+      </ul>
+    </li>
+
+    <!-- Navigation item: About -->
+    <li><a href="about.html">About</a></li>
+
+    <!-- Navigation item: Contact -->
+    <li><a href="contact.html">Contact</a>
+    </li>
+  </ul>
+</nav>
+  <div>
+    <h2>Speech Language Pathology Practicum</h2>
+    <p>
+
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    let currentSection = 0;
+    const sections = document.querySelectorAll('.section');
+
+    window.addEventListener('wheel', (event) => {
+      if (event.deltaY > 0) {
+        // Scroll down
+        if (currentSection < sections.length - 1) {
+          currentSection++;
+        }
+      } else {
+        // Scroll up
+        if (currentSection > 0) {
+          currentSection--;
+        }
+      }
+      scrollToSection(currentSection);
+    });
+
+    function scrollToSection(sectionIndex) {
+      sections[sectionIndex].scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  </script>
+</body>
+</html>
